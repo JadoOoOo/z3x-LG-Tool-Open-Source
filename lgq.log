@@ -1,0 +1,51 @@
+Source: lgq.exe
+File version: 0.0.0.1
+Found 20 marks.
+Warning: detect use of VerifySerialNumber. Ignored.
+Randomize: 619905308, 3821986317, 522203267, 2034824078
+Mark at 0x0010F5E8:  Size 24 bytes; 11 instructions; 0 jcc.
+Mark at 0x0010F650:  Size 57 bytes; 20 instructions; 0 jcc.
+Mark at 0x0010FCD4:  Size 58 bytes; 22 instructions; 0 jcc.
+Mark at 0x0010FD10:  Size 60 bytes; 23 instructions; 0 jcc.
+Mark at 0x0010FD50:  Size 58 bytes; 22 instructions; 0 jcc.
+Mark at 0x0010FD8C:  Size 60 bytes; 23 instructions; 0 jcc.
+Mark at 0x0010FDCC:  Size 60 bytes; 23 instructions; 0 jcc.
+Mark at 0x0010FE0C:  Size 60 bytes; 23 instructions; 0 jcc.
+Mark at 0x0010F58C:  Size 57 bytes; 20 instructions; 0 jcc.
+Mark at 0x0010F6A0:  Size 83 bytes; 30 instructions; 0 jcc.
+Mark at 0x0010F708:  Size 78 bytes; 28 instructions; 0 jcc.
+Mark at 0x0010F77C:  Size 83 bytes; 30 instructions; 0 jcc.
+Mark at 0x0010F7F4:  Size 78 bytes; 28 instructions; 0 jcc.
+Mark at 0x0010F8C4:  Size 44 bytes; 17 instructions; 0 jcc.
+Mark at 0x0010F98C:  Size 79 bytes; 26 instructions; 1 jcc.
+Mark at 0x0010FAA4:  Size 44 bytes; 17 instructions; 0 jcc.
+Mark at 0x0010FB88:  Size 79 bytes; 26 instructions; 1 jcc.
+Mark at 0x0010FF49:  Size 26 bytes; 4 instructions; 0 jcc.
+Mark at 0x00110965:  Size 147 bytes; 41 instructions; 5 jcc.
+Mark at 0x0012FF24:  Size 2240 bytes; WARNING: Detect exception handling inside block. Skipped
+Detect EXECryptor API usage: GetHardwareID, GetDate, EncryptStr, DecryptStr, EncryptStrW, DecryptStrW, SecureWrite, SecureWriteW, SecureRead, SecureReadW, MessageBox, GetProcAddr, AntiDebug, ProtectImport, GetTrialDaysLeft, GetTrialRunsLeft, GetReleaseDate, GetEXECryptorVersion, IsAppProtected, halt
+Destroy export directory
+Process import ...
+Compile EXECryptor API library 121362 bytes; 34864 instructions; 2465 jcc.
+Local transform: 22137 bytes; 6619 instructions; 171 jcc.
+Convert and hide 15 calls to imported procs/EXECryptor API
+Global transform: 28875 bytes; 8784 instructions; 245 jcc.
+Compile VM core 33461 bytes; 11884 instructions; 469 jcc.
+Total: 183698 bytes; 55532 instructions; 3179 jcc.
+Virtualization: 37172 instructions
+Total: 323719 bytes; 71968 instructions; 1855 jcc.
+Create extra code section at 0x00410000
+Assemble
+Extra code section size: 376724 --> 244757 bytes
+Hide 5 calls to EXECryptor API
+Flush relocation info.
+Compress relocation table
+Update TLS directory
+JCALG1 Compression Library. Copyright (C) Jeremy Collake.
+Compress code ...
+Compress resource ...
+Done: 4344341 --> 1351412 bytes (31%)
+Decompressor size: 388 bytes
+Compile loader 52736 bytes; 12828 instructions; 386 jcc.
+Save
+Done.

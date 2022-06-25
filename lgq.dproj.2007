@@ -1,0 +1,143 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{7B1D72B8-FB02-4974-B913-E2F2B97797D6}</ProjectGuid>
+			<MainSource>lgq.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_MapFile>3</DCC_MapFile>
+			<DCC_UsePackage>vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;IntrawebDB_50_70;Intraweb_50_70;Rave50CLX;Rave50VCL;dclOfficeXP;DJcl;JvStdCtrlsD7R;JvAppFrmD7R;JvCoreD7R;JvBandsD7R;JvBDED7R;JvDBD7R;JvDlgsD7R;JvCmpD7R;JvCryptD7R;JvCtrlsD7R;JvCustomD7R;JvDockingD7R;JvDotNetCtrlsD7R;JvEDID7R;qrpt;JvGlobusD7R;JvHMID7R;JvInspectorD7R;JvInterpreterD7R;JvJansD7R;JvManagedThreadsD7R;JvMMD7R;JvNetD7R;JvPageCompsD7R;JvPluginD7R;JvPrintPreviewD7R;JvSystemD7R;JvTimeFrameworkD7R;JvUIBD7R;JvValidatorsD7R;JvWizardD7R;JvXPCtrlsD7R;CPortLib7;DegisyCtrlsD7;tbx_d7;tb2k_d7;sslang;GR32_DSGN_D7;GR32_D7</DCC_UsePackage>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_DependencyCheckOutputName>lgq.exe</DCC_DependencyCheckOutputName>
+			<DCC_K>false</DCC_K>
+			<DCC_N>true</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_E>false</DCC_E>
+			<DCC_F>false</DCC_F>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="lgq.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="u_main.pas">
+				<Form>f_main</Form>
+			</DCCReference>
+			<DCCReference Include="nv_tables.pas"/>
+			<DCCReference Include="u_unlock.pas"/>
+			<DCCReference Include="u_array_utils.pas"/>
+			<DCCReference Include="u_previnst.pas"/>
+			<DCCReference Include="u_repair.pas">
+				<Form>f_repair</Form>
+			</DCCReference>
+			<DCCReference Include="u_Splash.pas">
+				<Form>f_splash</Form>
+			</DCCReference>
+			<DCCReference Include="u_other.pas"/>
+			<DCCReference Include="u_repair_imei.pas">
+				<Form>f_repair_imei</Form>
+			</DCCReference>
+			<DCCReference Include="u_select_modem_port.pas">
+				<Form>f_select_modem_port</Form>
+			</DCCReference>
+			<DCCReference Include="EXECryptor.pas"/>
+			<DCCReference Include="u_advanced_repair.pas">
+				<Form>f_advanced_repair</Form>
+			</DCCReference>
+			<DCCReference Include="u_cryptor.pas">
+				<Form>fConverter</Form>
+			</DCCReference>
+			<DCCReference Include="u_aes_utils.pas"/>
+			<DCCReference Include="u_unlock_type.pas">
+				<Form>f_unlock_type</Form>
+			</DCCReference>
+			<DCCReference Include="u_login.pas">
+				<Form>f_login</Form>
+			</DCCReference>
+			<DCCReference Include="E:\soft\Miranda\incoming\Andrew-418016710\DUMMY\MODULES\LGQ_MODELS\FGIntRSA.pas"/>
+			<DCCReference Include="E:\soft\Miranda\incoming\Andrew-418016710\DUMMY\MODULES\LGQ_MODELS\FGInt.pas"/>
+			<DCCReference Include="E:\soft\Miranda\incoming\Andrew-418016710\DUMMY\MODULES\LGQ_MODELS\FGIntPrimeGeneration.pas"/>
+			<DCCReference Include="u_comport.pas"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">lgq.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">0</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">1</VersionInfo>
+						<VersionInfo Name="Debug">True</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1058</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">andrew_tm</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.5</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">LGQ UMTS Tool</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.5</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
